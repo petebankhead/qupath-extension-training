@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import qupath.fx.controls.tour.GuiTour;
 import qupath.fx.controls.tour.TourItem;
+import qupath.fx.utils.FXUtils;
 import qupath.lib.gui.QuPathGUI;
 import qupath.lib.gui.viewer.tools.PathTools;
 
@@ -186,6 +187,7 @@ public class GuiTourCommand implements Runnable {
         stage.setTitle(getTitle());
         var scene = new Scene(tour);
         stage.setScene(scene);
+        FXUtils.addCloseWindowShortcuts(stage);
         return stage;
     }
 
